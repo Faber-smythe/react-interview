@@ -202,7 +202,6 @@ export default class CardsContainer extends Component{
     // little custom script (apart from react) for better checkboxes;
     CustomCheckboxes();
     const {movies, pagingPref, currentPage} = this.state;
-    console.log(this.state.filters);
     return(
       <>
         <h1>MOVIE LIST</h1>
