@@ -1,22 +1,115 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-}
-
-.App-header {
+/* ------------------------------/*
+/*  GENERAL
+/* ----------------------------- */
+body{
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
 }
+a{
+  text-decoration: none;
+  transition: all 0.3s ease;
+  color: inherit;
+}
+h1{
+   background: white;
+   color: #282c34;
+   margin: 0;
+   padding: 20px;
+}
+#root{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+main{
+  background: url('./img/background.png') top right no-repeat fixed;
+  background-size: cover;
+}
 
-.App-link {
-  color: #09d3ac;
+/* ------------------------------/*
+/*  FORM STYLE
+/* ----------------------------- */
+form{
+  display: inline-block;
+  margin: 20px 40px;
+  padding: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+form p{
+  margin: 0px;
+}
+form input[type="checkbox"]{
+  margin-left: 10px;
+}
+form label, form input[type="checkbox"]{
+  cursor: pointer;
+}
+
+/* ------------------------------/*
+/*  CARDS STYLE
+/* ----------------------------- */
+#cards_holder{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px 50px;
+}
+.movie-card{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  min-height: 200px;
+  margin: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(40, 44, 52, 0.8);
+  box-shadow: inset 0px 0px 60px 40px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+.movie-card:hover{
+border: 1px solid rgba(255, 255, 255, 0.7);
+}
+.decoration{
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  max-width: 40%;
+  opacity: 0.4;
+}
+.delete-button{
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  transition: all 0.3s ease;
+}
+.delete-button:hover{
+  opacity: 0.5;
+  cursor: pointer;
+}
+.movie-card h2, .movie-card p{
+  margin: auto 15px;
+}
+.likes-ratio-row{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.likes-ratio-row {
+  font-size: 0.8em;
+}
+.vote_thumb{
+  cursor: pointer;
+  opacity: 0.4;
+  transition: all 0.3s ease;
+}
+.vote_thumb.voted{
+  opacity: 1;
+}
+#likes-ratio-chart{
+  max-width: 40%;
 }
