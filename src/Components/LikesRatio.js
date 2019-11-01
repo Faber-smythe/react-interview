@@ -1,4 +1,5 @@
-import React, { Component } from 'react';
+import React from 'react';
+// library import
 import HSBar from "react-horizontal-stacked-bar-chart";
 
 

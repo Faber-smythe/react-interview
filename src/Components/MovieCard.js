@@ -11,16 +11,16 @@ export default function MovieCard(props){
 
   return(
     <div className="movie-card">
-      <img src={decoration} className="decoration"/>
-      <Delete className="delete-button" onClick={(e) => deleteMovie(props.movie.id)}/>
+      <img src={decoration} className="decoration" alt="just a movie reel patern"/>
+      <Delete className="delete-button" onClick={(e) => deleteMovie(props.movie)}/>
       <h2>{title}</h2>
       <p>— {category}</p>
       <p className="likes-ratio-row">
-        <ThumbUp className={`vote_thumb ${vote == 'up' ? 'voted' : ''}`} onClick={(e) => upVote(props.movie)}/>
+        <ThumbUp className={`vote_thumb ${vote === 'up' ? 'voted' : ''}`} onClick={(e) => upVote(props.movie)}/>
         {likes}
         <LikesRatio likes={likes} dislikes={dislikes}/>
         {dislikes}
-        <ThumbDown className={`vote_thumb ${vote == 'down' ? 'voted' : ''}`} onClick={(e) => downVote(props.movie)}/>
+        <ThumbDown className={`vote_thumb ${vote === 'down' ? 'voted' : ''}`} onClick={(e) => downVote(props.movie)}/>
       </p>
     </div>
   )
